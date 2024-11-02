@@ -1,6 +1,0 @@
-The following files failed to download during site export. Please check them in the designer assets view (images) or dashboard (fonts).
-
-fonts/PPNeueMontreal-Book.otf
-fonts/PPNeueMontreal-Book.otf
-fonts/PPNeueMontreal-Thin.otf
-fonts/PPNeueMontreal-Thin.otf

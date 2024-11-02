@@ -3,6 +3,7 @@
   --white: white;
   --link: #446df6;
   --radius: .25rem;
+  --yellow: #ffd500;
   --light-gray: #949494;
   --main-gray: #2b2b2b;
   --light-background: #f3f4fa;
@@ -190,6 +191,7 @@ strong {
   justify-content: center;
   align-self: stretch;
   align-items: flex-start;
+  margin-bottom: 2rem;
   display: grid;
 }
 
@@ -285,6 +287,15 @@ strong {
 }
 
 .u-link:active {
+  text-decoration: underline;
+}
+
+.u-link.highlight {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.u-link.highlight:hover {
   text-decoration: underline;
 }
 
@@ -400,9 +411,13 @@ strong {
 .image_description {
   color: var(--light-gray);
   text-align: center;
-  font-family: Opensans;
+  font-family: Ppneuemontreal Book, sans-serif;
   font-size: .75rem;
   line-height: 130%;
+}
+
+.image_description.u-description {
+  font-family: Ppneuemontreal Book, sans-serif;
 }
 
 .card-text {
@@ -459,7 +474,7 @@ strong {
 }
 
 .hero_paragraph.u-paragraph {
-  max-width: 30em;
+  max-width: 32em;
 }
 
 .product_layout {
@@ -472,7 +487,7 @@ strong {
 }
 
 .content_heading.u-heading {
-  max-width: 12em;
+  max-width: 16em;
 }
 
 .project_heading.u-heading {
@@ -533,12 +548,7 @@ strong {
   display: flex;
 }
 
-.overview_paragraph.u-paragraph {
-  max-width: 40em;
-}
-
-.content_paragraph.u-paragraph {
-  color: var(--light-background);
+.overview_paragraph.u-paragraph, .content_paragraph.u-paragraph {
   max-width: 40em;
 }
 
@@ -832,6 +842,10 @@ strong {
     font-size: 2rem;
   }
 
+  h2 {
+    font-size: 1.75rem;
+  }
+
   p {
     font-size: .875rem;
   }
@@ -841,7 +855,7 @@ strong {
   }
 
   .u-description {
-    font-size: .875rem;
+    line-height: 140%;
   }
 
   .frame {
@@ -856,25 +870,25 @@ strong {
     font-size: .875rem;
   }
 
-  .u-heading {
-    font-size: 2.5rem;
-  }
-
   .u-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
-  .content_heading.u-heading {
-    font-size: 1.75rem;
-  }
-
   .overview_heading.u-heading {
     font-size: 1.25rem;
+  }
+
+  .u-list_item {
+    font-size: .875rem;
   }
 }
 
 @media screen and (max-width: 767px) {
+  h3 {
+    font-size: 1rem;
+  }
+
   .nav-buttons-wrapper {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
@@ -882,6 +896,8 @@ strong {
 
   .description_layout {
     flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ".";
   }
 
   .frame {
@@ -920,14 +936,28 @@ strong {
     padding-top: 4rem;
   }
 
+  .project_card.middle {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
   .project_description {
     font-size: .875rem;
+  }
+
+  .u-list {
+    max-width: 80%;
+  }
+
+  .youtube_card {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 }
 
 @media screen and (max-width: 479px) {
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   p {
@@ -946,10 +976,6 @@ strong {
 
   .description_layout {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .u-description {
-    font-size: .75rem;
   }
 
   .u-theme-dark {
@@ -971,8 +997,12 @@ strong {
     grid-template-columns: 1fr 1fr;
   }
 
-  .u-heading {
-    font-size: 1.5rem;
+  .u-2-column_layout {
+    grid-template-columns: 1fr;
+  }
+
+  .u-2-column_layout.footer {
+    grid-template-columns: 1fr 1fr;
   }
 
   .u-container {
@@ -988,7 +1018,7 @@ strong {
     grid-row-gap: 1rem;
   }
 
-  .content_heading.u-heading, .project_heading.u-heading {
+  .project_heading.u-heading {
     font-size: 1.5rem;
   }
 
@@ -998,21 +1028,57 @@ strong {
     flex-flow: column;
   }
 
+  .interview_layout {
+    flex-flow: column;
+  }
+
+  .playground_description.u-description {
+    line-height: 130%;
+  }
+
   .project_card.blank {
     padding-top: 3rem;
   }
 
+  .project_card.middle {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .project_description {
+    font-size: .75rem;
+    line-height: 130%;
+  }
+
+  .nav_link {
+    font-size: .875rem;
+  }
+
+  .nav_link.hide {
+    display: none;
+  }
+
+  .u-list_item {
     font-size: .75rem;
   }
 
-  .nav_link, .footer_text {
+  .footer_text {
     font-size: .875rem;
+  }
+
+  ._0-75-1.u-2-column_layout {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
   }
 
   .skills_layout {
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
+  }
+
+  .youtube_card {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
