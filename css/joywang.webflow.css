@@ -46,7 +46,7 @@
 
 body {
   background-color: var(--dark);
-  color: var(--dark);
+  color: var(--white);
   font-family: Ppneuemontreal Book, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
@@ -191,16 +191,14 @@ strong {
   justify-content: center;
   align-self: stretch;
   align-items: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   display: grid;
 }
 
 .u-description {
   color: var(--white);
   letter-spacing: .01em;
-  font-family: Ppneuemontreal Book, sans-serif;
   font-size: .75rem;
-  font-weight: 400;
   line-height: 150%;
 }
 
@@ -221,14 +219,17 @@ strong {
   grid-column-gap: 5rem;
   grid-row-gap: 5rem;
   background-color: var(--dark);
-  color: var(--white);
   border: 1px #000;
   flex-direction: column;
   align-items: center;
   max-width: none;
-  font-family: Ppneuemontreal Book, sans-serif;
   display: block;
-  position: static;
+}
+
+.u-theme-dark.nav {
+  z-index: 99999;
+  position: sticky;
+  top: 0;
 }
 
 .interview-card {
@@ -411,13 +412,8 @@ strong {
 .image_description {
   color: var(--light-gray);
   text-align: center;
-  font-family: Ppneuemontreal Book, sans-serif;
   font-size: .75rem;
   line-height: 130%;
-}
-
-.image_description.u-description {
-  font-family: Ppneuemontreal Book, sans-serif;
 }
 
 .card-text {
@@ -492,14 +488,6 @@ strong {
 
 .project_heading.u-heading {
   margin-bottom: 3rem;
-}
-
-.product_card {
-  aspect-ratio: 594 / 396;
-  flex-flow: column;
-  display: block;
-  position: relative;
-  overflow: visible;
 }
 
 .project_content {
@@ -1094,31 +1082,31 @@ strong {
 
 
 @font-face {
-  font-family: 'Ppneuemontreal';
-  src: url('../fonts/PPNeueMontreal-Thin.otf') format('opentype'), url('../fonts/PPNeueMontreal-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: 'Ppneuemontreal Book';
-  src: url('../fonts/PPNeueMontreal-Book.otf') format('opentype'), url('../fonts/PPNeueMontreal-Book.otf') format('opentype');
+  src: url('../fonts/PPNeueMontreal-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Ppneuemontreal';
-  src: url('../fonts/PPNeueMontreal-Medium.otf') format('opentype'), url('../fonts/PPNeueMontreal-Medium.otf') format('opentype');
+  src: url('../fonts/PPNeueMontreal-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Ppneuemontreal';
-  src: url('../fonts/PPNeueMontreal-SemiBolditalic.otf') format('opentype'), url('../fonts/PPNeueMontreal-SemiBolditalic.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
+  src: url('../fonts/PPNeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ppneuemontreal';
+  src: url('../fonts/PPNeueMontreal-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
@@ -1130,8 +1118,8 @@ strong {
 }
 @font-face {
   font-family: 'Ppneuemontreal';
-  src: url('../fonts/PPNeueMontreal-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
+  src: url('../fonts/PPNeueMontreal-SemiBolditalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
   font-display: swap;
 }
