@@ -664,7 +664,7 @@ strong {
 
 @media screen and (min-width: 1440px) {
   body {
-    font-family: Standard Book Webfont;
+    font-family: Ppneuemontreal Book, sans-serif;
   }
 
   h1 {
@@ -746,8 +746,8 @@ strong {
     align-items: flex-end;
   }
 
-  .footer_social_link.w--current {
-    font-size: .875rem;
+  .footer_social_link, .footer_social_link.w--current {
+    font-size: 1rem;
   }
 
   .project_image {
@@ -818,6 +818,10 @@ strong {
     align-items: center;
     padding: 24px;
     display: flex;
+  }
+
+  .project_description.u-description, .footer_text {
+    font-size: 1.125rem;
   }
 }
 
@@ -982,7 +986,7 @@ strong {
 
   .playground_layout {
     grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .u-2-column_layout {
