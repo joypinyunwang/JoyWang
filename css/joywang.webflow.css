@@ -7,6 +7,9 @@
   --light-gray: #949494;
   --main-gray: #2b2b2b;
   --light-background: #f3f4fa;
+  --light-purple: #d1c9f9;
+  --light-yellow: #fdefc5;
+  --font-family: Ppneuemontreal, sans-serif;
 }
 
 .w-layout-blockcontainer {
@@ -60,7 +63,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Ppneuemontreal Book, sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   line-height: 100%;
 }
@@ -146,8 +149,8 @@ img {
 }
 
 strong {
-  font-family: Opensans;
-  font-weight: 600;
+  font-family: Ppneuemontreal, sans-serif;
+  font-weight: 500;
 }
 
 .nav-buttons-wrapper {
@@ -199,7 +202,7 @@ strong {
   color: var(--white);
   letter-spacing: .01em;
   font-size: .75rem;
-  line-height: 150%;
+  line-height: 140%;
 }
 
 .frame {
@@ -283,7 +286,7 @@ strong {
 }
 
 .u-link:hover {
-  color: var(--link);
+  color: var(--white);
   text-decoration: underline;
 }
 
@@ -375,6 +378,7 @@ strong {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
+  margin-bottom: 6rem;
   display: grid;
 }
 
@@ -451,6 +455,10 @@ strong {
   position: relative;
 }
 
+.hero_section.u-theme-dark {
+  background-color: var(--dark);
+}
+
 .hero_container.u-container {
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
@@ -473,13 +481,23 @@ strong {
   max-width: 32em;
 }
 
+.project-container.u-container {
+  color: var(--white);
+}
+
 .product_layout {
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
+  align-content: end;
+  margin-bottom: 6rem;
   display: grid;
+}
+
+.product_layout._1-5-1 {
+  grid-template-columns: 1.5fr 1fr;
 }
 
 .content_heading.u-heading {
@@ -491,12 +509,17 @@ strong {
 }
 
 .project_content {
-  flex-flow: row;
+  flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: .5rem;
   display: flex;
   position: relative;
+}
+
+.project_content.u-theme-dark {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
 }
 
 .footer_container.u-container {
@@ -558,8 +581,8 @@ strong {
 }
 
 .nav_container.u-container {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .nav_layout {
@@ -599,7 +622,15 @@ strong {
   text-decoration: underline;
 }
 
-.nav_link.name:hover, .nav_link.name.w--current:hover {
+.nav_link.name:hover {
+  text-decoration: none;
+}
+
+.nav_link.name.w--current {
+  font-family: Ppneuemontreal, sans-serif;
+}
+
+.nav_link.name.w--current:hover {
   text-decoration: none;
 }
 
@@ -662,15 +693,27 @@ strong {
   margin-right: 3.5rem;
 }
 
+.hightlight_paragraph {
+  color: var(--light-purple);
+}
+
+.hightlight_paragraph.u-paragraph {
+  color: var(--light-purple);
+  -webkit-text-stroke-color: var(--light-purple);
+}
+
+.highlight_link.u-link {
+  background-color: var(--light-yellow);
+  color: var(--dark);
+}
+
+.topic_description {
+  color: var(--light-gray);
+}
+
 @media screen and (min-width: 1440px) {
   body {
     font-family: Ppneuemontreal Book, sans-serif;
-  }
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 130%;
   }
 
   h2 {
@@ -752,10 +795,6 @@ strong {
 
   .project_image {
     width: 891px;
-  }
-
-  .u-link {
-    color: #446df6;
   }
 
   .utility-page-wrap {
@@ -1072,6 +1111,10 @@ strong {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+}
+
+#w-node-_9e2555f1-2520-a5b2-2ca2-42dd52b143e1-012a40ae, #w-node-_2dc67e43-676b-2b4c-eecb-355c948e5892-012a40ae {
+  align-self: end;
 }
 
 #w-node-_27676972-40b1-1b4b-8daa-a7f7683e630f-012a40ae, #w-node-b7ce7dca-2056-f215-604c-cf2041326c23-012a40ae, #w-node-e40278ab-7689-432d-f982-cb93b11f4ffc-012a40ae, #w-node-e40278ab-7689-432d-f982-cb93b11f5001-012a40ae, #w-node-e40278ab-7689-432d-f982-cb93b11f5006-012a40ae {
