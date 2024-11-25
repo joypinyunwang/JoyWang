@@ -710,6 +710,13 @@ strong {
   color: var(--light-gray);
 }
 
+.content_card {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-flow: column;
+  display: flex;
+}
+
 @media screen and (min-width: 1440px) {
   body {
     font-family: Ppneuemontreal Book, sans-serif;
